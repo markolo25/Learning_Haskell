@@ -3,15 +3,13 @@ import Text.Read
 fac :: Int -> Int
 fac n = if n == 0 then 1 else n * fac (n - 1)
         
-       
+getInt = do
+      x <- getLine
+      return (read x :: Int)      
 
-main = do  
+
+
+main = do
    putStrLn "What n would you like to n!"
-   r <- getLine
-   print fac 5
-   let maybeInt = read r :: Maybe Int
-   print maybeInt
-   case maybeInt of
-         Just n  -> print (fac n) >> main
-         Nothing -> putStrLn "Please try again."  >> main
+   fac getInt
 
