@@ -1,7 +1,7 @@
 import Text.Read        
 getInt = do
       x <- getLine
-      return (read x :: Int)      
+      return (read x :: Float)      
 
 main = do
    putStrLn "What n would you like to n!"
